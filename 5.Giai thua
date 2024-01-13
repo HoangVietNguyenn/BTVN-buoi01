@@ -1,0 +1,14 @@
+def factorial(n):
+    assert n >= 0 and int(n) == n, 'The number must be positive integer only!'
+    if n in [0,1]:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+dapAn=factorial(5)
+print(dapAn)
+# nhập vào factorial(5), n=5 
+# xét hàm if n=0,1 thì in ra 1
+# nếu n > 1 thì thực hiện hàm else 
+# n = 5> 1 => 5*4*3*2*1 = 120 
+#in ra đáp án là 120 
