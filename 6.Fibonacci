@@ -1,0 +1,14 @@
+def fibonacci(n):
+ assert n >=0 and int(n) == n , 'Fibonacci number cannot be negative number or non integer.'
+ if n in [0,1]:
+    return n
+ else:
+    return fibonacci(n-1) + fibonacci(n-2) # phân rã công thức 
+kQ=fibonacci(4)
+print (kQ)
+
+#day fibonacci =>  0 1 1 2 3 5 8 13 ......
+# khi ta nhập vào số n=0,1 thì sẽ in ra n
+# bắt đầu bằng 0,1 và từ số thứ 2 trở đi thì sẽ lấy 2 số trước đó cộng lại 
+# nhập fibonacci(4), n=4 => fibonacci(n-1) + fibonacci(n-2)
+#in ra 1+2 =3 ( lấy vị trí thứ nhất + vị trí thứ 2 trong dãy)
