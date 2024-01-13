@@ -1,0 +1,11 @@
+def recursiveMethod(n):
+    if n<1:
+        print(" n is less than 1")
+    else: 
+     recursiveMethod(n-1)
+    print(n)
+recursiveMethod(3)
+
+# ta nhập giá trị recursiveMethod(3) , n =3
+# hàm sẽ xét điều kiện của n =3 và thực hiện lệnh else in ra n=3 sau đó xét tiếp điều kiện in ra  n=2, n=1 
+# cho đến khi thỏa lệnh if 0<1 thì in ra " n is less than 1"
