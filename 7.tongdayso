@@ -1,0 +1,24 @@
+# Sum of digit of number using recursion
+
+def sum_of_digit(n):
+    if n< 10:
+        return n
+    else:
+        return n%10 + sum_of_digit(n//10) # cho n =25 , chia lấy dư 25%10 = 2 dư 5 
+                                         # lấy số dư =5 + chia lấy nguyên 25//10 = 2 
+
+# Read number
+number = int(input("Enter number: "))
+
+# Function call
+digit_sum = sum_of_digit(number)
+
+# Display output
+print("Sum of digit of number %d is %d." % (number,digit_sum))
+
+# ví dụ nhập number =234 , lấy 234 % 10 = 23 dư 4 
+# thấy lệnh gọi sum_of_digit(n//10) = 234//10 = 23 sau đó quay lại sum_of_digit(n) để kiểm tra n <10 hay chưa
+# nếu n chưa <10 thì lấy số đó chia tiếp: 23 % 10 =2 dư 3
+# thấy lệnh gọi sum_of_digit(n//10) = 23//10 = 2 sau đó quay lại um_of_digit(n) để kiểm tra 
+# nếu n<10 thì return = 2 và thực hiện cộng phần dư lại 
+# 4+3+2 = 9
