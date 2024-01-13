@@ -1,0 +1,12 @@
+def openRussianDoll(doll):
+ if doll == 1:
+     print("All dolls are opened")
+ else:
+  openRussianDoll(doll-1)
+ketQua = openRussianDoll(3)
+print(ketQua)
+
+#giải thích code dạng đệ quy
+#ta nhập vào một số openRussianDoll(3) , doll=3
+#hàm sẽ xét tuần tự : doll-1 , doll-2, đến khi doll == 1 thì in ra 'All dolls are opened'
+# hàm đệ quy gọi lại chính nó đến khi đúng với điều kiện đặt ra 
