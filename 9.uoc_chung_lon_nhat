@@ -1,0 +1,20 @@
+def tim_uoc_chung_lon_nhat(a, b):
+    # Base case: Nếu b bằng 0, ước chung lớn nhất là a
+    if b == 0:
+        return a
+    else:
+        # Gọi đệ quy với b và a % b
+        return tim_uoc_chung_lon_nhat(b,b = a % b)
+
+# Ví dụ sử dụng
+a = 32
+b = 12
+uoc_chung_lon_nhat = tim_uoc_chung_lon_nhat(a, b)
+print(f"Ước chung lớn nhất của {a} và {b} là: {uoc_chung_lon_nhat}")
+
+# nhập số a=32 ; số b = 12
+#xét điều kiện b==0 thì trả về a
+# b khác 0 thì thực hiện hàm else theo đệ quy b 
+# lấy a % b <=> 32 % 12 = 2 dư 8 = b 
+#xét tiếp b==0 chưa nếu chưa thì 32 % 8 = 4 ( chia hết )
+#return ra ket qua là 4
