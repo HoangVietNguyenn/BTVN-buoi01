@@ -1,0 +1,18 @@
+def firstMethod():                  # sau khi ta gọi hàm firstMethod() 
+ secondMethod()                  # thì gặp câu lệnh gọi hàm secondMethod() và đưa vào hàng đợi cho lệnh firstMethod() thực hiện xong
+ print("I am the first Method")      # sau đó gặp lệnh in ra "I am the first Method"
+def secondMethod():          # sau khi hàm firstMethod() thực hiện xong và in ra thì chạy đến hàm đợi secondMethod() để thực hiện lại 
+ thirdMethod()                  # gặp lệnh gọi hàm thirdMethod() và đưa vào hàng đợi cho lệnh secondMethod() thực hiện xong 
+ print("I am the second Method") # thực hiện hàm secondMethod() in ra "I am the second Method"
+def thirdMethod():                # tiếp tục tuần tự cho đến hết 
+ fourthMethod()
+ print("I am the third Method")
+def fourthMethod():
+ print("I am the fourth Method")
+
+firstMethod()
+
+# hàm đệ quy dạng bộ nhớ ngăn sếp stack sẽ thực hiện tuần tự các hàm gọi trước thì thực hiện trước
+# và gọi hàm sau để đưa vào ngăn sếp ở hàng đợi
+# khi thực hiện xong hàm đầu thì tiếp tục thực hiện hàm tiếp theo ở hàng đợi 
+# thực hiện tuần tự cho đến khi hết hàm gọi 
