@@ -1,0 +1,12 @@
+def luy_thua(x,n):
+    if n==0:
+        return 1
+    else:
+        return x * luy_thua(x,n-1)
+kq=luy_thua(5,3)
+print(kq)
+
+#xét điều kiện if nếu n== 0 thì retrun ra 1
+# nhập luy_thua(5,3) , n # 0 nên thực hiện lệnh else 5* luy_thua(x,n-1) 
+# gặp lệnh gọi hàm luy_thua(x,n-1)sẽ tiếp tục nhân cho 5 và giảm n đi 1 đến khi if n ==0 thì trả về 1 
+# 5*5*5*1 = 125 
